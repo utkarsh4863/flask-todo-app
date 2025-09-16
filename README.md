@@ -6,6 +6,14 @@ The app features a clean dashboard, dark mode, and user profiles with task stati
 
 ---
 
+## Tech Stack
+
+- **Backend:** Python 3.x, Flask
+- **Database:** SQLite
+- **Frontend:** HTML, CSS, JavaScript
+
+___
+
 ## 🛠 Features
 
 - **User Authentication:** Register, login, logout with secure password hashing.  
