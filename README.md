@@ -50,6 +50,16 @@ All dependencies are listed in `requirements.txt` and can be installed with:
 ```bash
 pip install -r requirements.txt
 
+## 🖼 Screenshots
+
+
+
+## 📌 Notes
+
+- The SQLite database (`todo.db`) is auto-created in the `instance/` folder.  
+- Dark mode preferences are stored locally in the browser.  
+- Make sure the `venv/` and `instance/` folders are ignored in GitHub (`.gitignore`).
+
 
 
 
