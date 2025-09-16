@@ -13,9 +13,44 @@ A simple **To-Do List web application** built with **Flask**, **SQLAlchemy**, an
 
 ## ⚡ Installation
 
-1. **Clone the repository:**
 ```bash
-git clone <your-repo-link>
-cd TO-DO-LIST-APP
+# 1. Clone the repository
+git clone https://github.com/utkarsh4863/flask-todo-app
+cd flask-todo-app
+
+# 2. Create a virtual environment
+python -m venv venv
+
+# 3. Activate the virtual environment
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the application
+python run.py
+
+# 6. Access the app in your browser
+# Open http://127.0.0.1:5000
+
+## Dependencies
+
+This project requires the following Python packages:
+
+- **Flask** - Web framework for building the application.  
+- **Flask-Login** - User session management for Flask.  
+- **Flask-SQLAlchemy** - ORM for database interactions.  
+- **Werkzeug** - Utility library, used here for password hashing.  
+
+All dependencies are listed in `requirements.txt` and can be installed with:
+
+```bash
+pip install -r requirements.txt
+
+
+
 
 
