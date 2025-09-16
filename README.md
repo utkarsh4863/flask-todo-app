@@ -22,10 +22,12 @@ The app features a clean dashboard, dark mode, and user profiles with task stati
 Follow these steps to set up the project locally:
 
 1. Clone the repository:
+
 git clone https://github.com/utkarsh4863/flask-todo-app
 cd flask-todo-app
 
 2. Create a virtual environment:
+
 python -m venv venv
 
 3. Activate the virtual environment:
@@ -37,9 +39,11 @@ venv\Scripts\activate
 source venv/bin/activate
 
 4. Install dependencies:
+
 pip install -r requirements.txt
 
 5. Run the application:
+
 python run.py
 
 ---
