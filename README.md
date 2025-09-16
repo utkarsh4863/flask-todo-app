@@ -51,8 +51,7 @@ All dependencies are listed in `requirements.txt` and can be installed with:
 pip install -r requirements.txt
 
 ## 🖼 Screenshots
-
-
+https://github.com/utkarsh4863/flask-todo-app/blob/main/To%20do%20app%20screenshots.png 
 
 ## 📌 Notes
 
