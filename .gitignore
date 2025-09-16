@@ -1,21 +1,38 @@
-# Python
+# Python cache files
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Virtual Environment
+# Virtual environment
 venv/
 ENV/
 env/
+.venv/
 
-# Database
-instance/
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Databases
 *.db
 *.sqlite3
 
-# VSCode
-.vscode/
-
-# Other
+# Logs & temp files
 *.log
+*.pot
+*.tmp
+
+# Flask specific
+instance/
+*.pyc
+
+# Byte-compiled / optimized / DLL files
+*.dll
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+
