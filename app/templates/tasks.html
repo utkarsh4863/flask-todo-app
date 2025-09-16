@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm">
+  <h2 class="mb-4 text-center">My Tasks</h2>
+
+  <!-- Search and Filter -->
+  <form method="GET" class="row g-2 mb-4">
+    <div class="col-md-6">
+      <input type="text" name="search" class="form-control" placeholder="Search task..." value="{{ request.args.get('search', '') }}">
+    </div>
+    <div class="col-md-4">
+      <select name="priority" class="form-select">
+        <option value="All">All Priorities</option>
+        <option value="Low" {% if request.args.get('priority') == "Low" %}selected{% endif %}>Low</option>
+        <option value="Medium" {% if request.args.get('priority') == "Medium" %}selected{% endif %}>Medium</option>
+        <option value="High" {% if request.args.get('priority') == "High" %}selected{% endif %}>High</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-secondary w-100" type="submit">Filter</button>
+    </div>
+  </form>
+
+  <!-- Add Task -->
+  <form method="POST" action="{{ url_for('tasks.add_task') }}" class="mb-4">
+    <div class="row g-2">
+      <div class="col-md-5">
+        <input type="text" name="title" class="form-control" placeholder="Add new task..." required>
+      </div>
+      <div class="col-md-3">
+        <input type="date" name="due_date" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <select name="priority" class="form-select">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" type="submit">Add</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Task List -->
+  <ul class="list-group">
+    {% for task in tasks %}
+      <li class="list-group-item d-flex justify-content-between align-items-center task-item
+        {% if task.completed %}completed-task{% endif %}">
+        <div>
+          <span class="task-title {% if task.completed %}text-decoration-line-through text-muted{% endif %}">
+            {{ task.title }}
+          </span>
+          {% if task.due_date %}
+            <small class="text-muted ms-2">(Due: {{ task.due_date.strftime('%Y-%m-%d') }})</small>
+          {% endif %}
+          <span class="badge 
+            {% if task.priority == 'High' %}bg-danger
+            {% elif task.priority == 'Medium' %}bg-warning
+            {% else %}bg-success{% endif %} ms-2">
+            {{ task.priority }}
+          </span>
+        </div>
+        <div>
+          {% if not task.completed %}
+            <a href="{{ url_for('tasks.complete_task', task_id=task.id) }}" class="btn btn-sm btn-success me-1">Complete</a>
+          {% endif %}
+          <a href="{{ url_for('tasks.delete_task', task_id=task.id) }}" class="btn btn-sm btn-danger">Delete</a>
+        </div>
+      </li>
+    {% else %}
+      <li class="list-group-item text-center text-muted">No tasks yet!</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+/* Task List Hover */
+.task-item {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Completed Task Styling */
+.completed-task {
+  background: #f1f3f5;
+  opacity: 0.7;
+}
+
+.dark-mode .completed-task {
+  background: #2c2c2c;
+  opacity: 0.8;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+</style>
+
+{% endblock %}

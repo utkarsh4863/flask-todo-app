@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm text-center">
+  <h2>{{ current_user.username }}'s Profile</h2>
+  <p><strong>Total Tasks:</strong> {{ total }}</p>
+  <p><strong>Completed:</strong> {{ completed }}</p>
+  <p><strong>Pending:</strong> {{ pending }}</p>
+</div>
+{% endblock %}
