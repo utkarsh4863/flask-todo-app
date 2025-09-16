@@ -42,7 +42,7 @@ python run.py
 # 6. Access the app in your browser
 # Open http://127.0.0.1:5000
 
-## 🖼 Screenshots
+---
 
-![To-Do App Screenshot](https://github.com/utkarsh4863/flask-todo-app/blob/main/To%20do%20app%20screenshots.png)
+
 
