@@ -19,7 +19,6 @@ The app features a clean dashboard, dark mode, and user profiles with task stati
 
 ## ⚡ Installation
 
-```bash
 # 1. Clone the repository
 git clone https://github.com/utkarsh4863/flask-todo-app
 cd flask-todo-app
@@ -43,6 +42,34 @@ python run.py
 # Open http://127.0.0.1:5000
 
 ---
+
+## 📦 Dependencies
+
+This project requires the following Python packages:
+
+- **Flask** - Web framework for building the application.  
+- **Flask-Login** - User session management for Flask.  
+- **Flask-SQLAlchemy** - ORM for database interactions.  
+- **Werkzeug** - Utility library, used here for password hashing.  
+
+All dependencies are listed in `requirements.txt`.
+
+---
+
+## 🖼 Screenshots
+
+![Dashboard](https://github.com/utkarsh4863/flask-todo-app/blob/main/To%20do%20app%20screenshots.png)
+
+---
+
+## 📌 Notes
+
+- The SQLite database (`todo.db`) is auto-created in the `instance/` folder.  
+- Dark mode preferences are stored locally in the browser.  
+- Make sure the `venv/` and `instance/` folders are ignored in GitHub (`.gitignore`).
+
+---
+
 
 
 
