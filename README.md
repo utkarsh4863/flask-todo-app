@@ -11,33 +11,11 @@ A simple **To-Do List web application** built with **Flask**, **SQLAlchemy**, an
 - **Responsive UI:** Clean, mobile-friendly dashboard.
 - **Dark Mode Toggle:** Switch between light and dark themes.
 
-## 📁 Project Structure
+## ⚡ Installation
+
+1. **Clone the repository:**
+```bash
+git clone <your-repo-link>
+cd TO-DO-LIST-APP
 
 
-TO-DO-LIST-APP/
-│── run.py # App entry point
-│── requirements.txt # Dependencies (Flask, Flask-Login, SQLAlchemy etc.)
-│── app/
-│ │── init.py # Flask app factory & DB setup
-│ │── models.py # User & Task database models
-│ │
-│ ├── routes/
-│ │ │── init.py # Makes "routes" a Python package
-│ │ │── auth.py # Login, register, logout routes
-│ │ │── tasks.py # Task CRUD and profile routes
-│ │
-│ ├── templates/
-│ │ │── base.html # Common layout (navbar, flash messages, dark mode)
-│ │ │── login.html
-│ │ │── register.html
-│ │ │── tasks.html # Task dashboard (add, filter, list, complete, delete)
-│ │ │── profile.html # User profile page (stats)
-│ │
-│ ├── static/
-│ │ ├── css/style.css
-│ │ ├── js/script.js
-│ │ └── images/ # Optional images, icons, logos
-│
-│── venv/ # Virtual environment (ignore in GitHub)
-│── instance/
-│ └── todo.db # SQLite database (auto-created)
