@@ -1,6 +1,6 @@
 # 📝 To-Do List App
 
-A simple **To-Do List web application** built with **Flask**, **SQLAlchemy**, and **Flask-Login**.  
+A simple **To-Do List web application** built with **Python**,**Flask**, **SQLAlchemy**, and **Flask-Login**.  
 Users can register, login, create tasks, mark them as complete, delete tasks, and track progress.  
 The app features a clean dashboard, dark mode, and user profiles with task statistics.
 
