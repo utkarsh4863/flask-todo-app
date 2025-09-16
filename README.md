@@ -28,23 +28,23 @@ cd flask-todo-app
 
 2. Create a virtual environment:
 
-python -m venv venv
+         python -m venv venv
 
 3. Activate the virtual environment:
 
-- Windows:
-venv\Scripts\activate
+       - Windows:
+          venv\Scripts\activate
 
-- macOS/Linux:
-source venv/bin/activate
+       - macOS/Linux:
+         source venv/bin/activate
 
 4. Install dependencies:
 
-pip install -r requirements.txt
+        pip install -r requirements.txt
 
 5. Run the application:
 
-python run.py
+        python run.py
 
 ---
 
